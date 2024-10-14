@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import * as zod from "zod";
 
 import { Button } from "@/components/ui/button";
@@ -21,6 +22,7 @@ export default function SignIn() {
 
   const handleSignIn = (data: SignInForm) => {
     console.log(data);
+    toast.success("Enviamos um link de autenticação para seu e-mail");
   };
 
   return (
