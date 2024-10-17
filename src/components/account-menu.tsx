@@ -44,7 +44,7 @@ export default function AccountMenu() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuLabel className="flex flex-col">
-          {isLoadingManagedRestaurant ? (
+          {isLoadingProfile ? (
             <div className="space-y-1.5">
               <Skeleton className="h-4 w-32" />
               <Skeleton className="h-3 w-24" />
