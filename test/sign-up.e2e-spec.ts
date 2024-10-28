@@ -8,7 +8,7 @@ test("sign up successfully", async ({ page }) => {
   await page.getByLabel("Seu celular").fill("123812641264");
   await page.getByRole("button", { name: "Finalizar cadastro" }).click();
   const toast = page.getByText("Restaurante cadastrado com sucesso");
-  expect(toast).toBeVisible();
+  await expect(toast).toBeVisible();
 });
 
 test("sign up with error", async ({ page }) => {
@@ -19,7 +19,7 @@ test("sign up with error", async ({ page }) => {
   await page.getByLabel("Seu celular").fill("123812641264");
   await page.getByRole("button", { name: "Finalizar cadastro" }).click();
   const toast = page.getByText("Erro ao cadastrar restaurante");
-  expect(toast).toBeVisible();
+  await expect(toast).toBeVisible();
 });
 
 test("navigate to login page", async ({ page }) => {
